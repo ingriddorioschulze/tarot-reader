@@ -1,12 +1,18 @@
 import React from 'react'
+import CardTarot from './CardTarot'
+import GlobalStyles from './GlobalStyles'
+import styled, { ThemeProvider } from 'styled-components'
+import theme from './theme'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <div>
         <div>Tarot Reader</div>
-      </header>
-    </div>
+        <CardTarot />
+      </div>
+    </ThemeProvider>
   )
 }
 
